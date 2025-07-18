@@ -1,0 +1,2185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4ffde210095775048dcba36760e05f34 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+            top: 10px; left: 10px; width: 350px; height: 50px; 
+            background-color: rgba(255, 255, 255, 0.9); 
+            border: 2px solid #333;
+            border-radius: 8px; 
+            z-index: 9999; 
+            font-family: Arial, sans-serif; 
+            font-size: 22px; 
+            font-weight: bold; 
+            color: #333;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+    ITI VS MSMEs Hubli/Dharwad
+</div>
+    
+            <div class="folium-map" id="map_4ffde210095775048dcba36760e05f34" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4ffde210095775048dcba36760e05f34 = L.map(
+                "map_4ffde210095775048dcba36760e05f34",
+                {
+                    center: [15.4, 75.05],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9f04aa16c3bf56680bcba18d39bab506 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9f04aa16c3bf56680bcba18d39bab506.addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var marker_7bda6f9dfa116f317a1bbf64a7fecc58 = L.marker(
+                [15.3638384, 75.1275701],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_004c28b04b354ec12e30c9d5a7f8b63e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2a6561f97c61b10a6e62afff4806b983 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f2101bf45999cbb57578449ad26801bd = $(`<div id="html_f2101bf45999cbb57578449ad26801bd" style="width: 100.0%; height: 100.0%;"><b>Govt. Industrial Training Institute</b><br>Type: ITI</div>`)[0];
+                popup_2a6561f97c61b10a6e62afff4806b983.setContent(html_f2101bf45999cbb57578449ad26801bd);
+            
+        
+
+        marker_7bda6f9dfa116f317a1bbf64a7fecc58.bindPopup(popup_2a6561f97c61b10a6e62afff4806b983)
+        ;
+
+        
+    
+    
+                marker_7bda6f9dfa116f317a1bbf64a7fecc58.setIcon(icon_004c28b04b354ec12e30c9d5a7f8b63e);
+            
+    
+            var marker_57b850d2ec0eb5817689341694504258 = L.marker(
+                [15.3233746, 75.1263033],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_4e7acbf16e447a707a2a069003a9ae7d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_66168c43cc1118e79380f1caa5306825 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9112f1c9ab1550c2b26321a386888ace = $(`<div id="html_9112f1c9ab1550c2b26321a386888ace" style="width: 100.0%; height: 100.0%;"><b>Dr. Ambedkar Shikshan Sam ITI</b><br>Type: ITI</div>`)[0];
+                popup_66168c43cc1118e79380f1caa5306825.setContent(html_9112f1c9ab1550c2b26321a386888ace);
+            
+        
+
+        marker_57b850d2ec0eb5817689341694504258.bindPopup(popup_66168c43cc1118e79380f1caa5306825)
+        ;
+
+        
+    
+    
+                marker_57b850d2ec0eb5817689341694504258.setIcon(icon_4e7acbf16e447a707a2a069003a9ae7d);
+            
+    
+            var marker_ea6f176e40753bf5b961544276d94e8d = L.marker(
+                [15.3638384, 75.1275701],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_b64b59c22896918cb57b8bd50721a19f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a4f02f9f096751b7c9a9270a927657b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b27860d07d3eb00e6c1a526891d0819c = $(`<div id="html_b27860d07d3eb00e6c1a526891d0819c" style="width: 100.0%; height: 100.0%;"><b>Mahila Vidyapeeta ITI</b><br>Type: ITI</div>`)[0];
+                popup_a4f02f9f096751b7c9a9270a927657b5.setContent(html_b27860d07d3eb00e6c1a526891d0819c);
+            
+        
+
+        marker_ea6f176e40753bf5b961544276d94e8d.bindPopup(popup_a4f02f9f096751b7c9a9270a927657b5)
+        ;
+
+        
+    
+    
+                marker_ea6f176e40753bf5b961544276d94e8d.setIcon(icon_b64b59c22896918cb57b8bd50721a19f);
+            
+    
+            var marker_0c8c5660836fba21a9d859055e737d6a = L.marker(
+                [15.3440054, 75.1458667],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_5f76f8338bbd74649a81f9ae39930d6a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3b6cf57f81ef00b428f9d674189c7c88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_94bcbc0379a8186d1a2718ae73071f44 = $(`<div id="html_94bcbc0379a8186d1a2718ae73071f44" style="width: 100.0%; height: 100.0%;"><b>Smt. Kamalamma Lahoti ITI</b><br>Type: ITI</div>`)[0];
+                popup_3b6cf57f81ef00b428f9d674189c7c88.setContent(html_94bcbc0379a8186d1a2718ae73071f44);
+            
+        
+
+        marker_0c8c5660836fba21a9d859055e737d6a.bindPopup(popup_3b6cf57f81ef00b428f9d674189c7c88)
+        ;
+
+        
+    
+    
+                marker_0c8c5660836fba21a9d859055e737d6a.setIcon(icon_5f76f8338bbd74649a81f9ae39930d6a);
+            
+    
+            var marker_bd3c08c32e81f50c2d91db6f75d8a880 = L.marker(
+                [15.3558762, 75.1274944],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_c9594daacbe6ff2451b3aad00e9753f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e0dcd6119f013dca57c5bf964800905c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5060a0ede6b3fc234418a3ba6b789e82 = $(`<div id="html_5060a0ede6b3fc234418a3ba6b789e82" style="width: 100.0%; height: 100.0%;"><b>Sri Siddeshwar ITI</b><br>Type: ITI</div>`)[0];
+                popup_e0dcd6119f013dca57c5bf964800905c.setContent(html_5060a0ede6b3fc234418a3ba6b789e82);
+            
+        
+
+        marker_bd3c08c32e81f50c2d91db6f75d8a880.bindPopup(popup_e0dcd6119f013dca57c5bf964800905c)
+        ;
+
+        
+    
+    
+                marker_bd3c08c32e81f50c2d91db6f75d8a880.setIcon(icon_c9594daacbe6ff2451b3aad00e9753f6);
+            
+    
+            var marker_f7778d633aaccbedfe65e6b385d09798 = L.marker(
+                [15.3549819, 75.0887119],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_b44501de648189778a6c98543d27ec3d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8eab5173a978cbc8fa0a152491824bdf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08b191912f0b58a5d02b8f7c2f8ac08c = $(`<div id="html_08b191912f0b58a5d02b8f7c2f8ac08c" style="width: 100.0%; height: 100.0%;"><b>Govt. ITI for Women</b><br>Type: ITI</div>`)[0];
+                popup_8eab5173a978cbc8fa0a152491824bdf.setContent(html_08b191912f0b58a5d02b8f7c2f8ac08c);
+            
+        
+
+        marker_f7778d633aaccbedfe65e6b385d09798.bindPopup(popup_8eab5173a978cbc8fa0a152491824bdf)
+        ;
+
+        
+    
+    
+                marker_f7778d633aaccbedfe65e6b385d09798.setIcon(icon_b44501de648189778a6c98543d27ec3d);
+            
+    
+            var marker_97a2f98c1b701a26e9ce4ae2b6618ab0 = L.marker(
+                [15.3598653, 75.0466235],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_70563992d078f370d3a8b9402dd2ef67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_931ddc221e03171640844f845b2c6103 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e2c0e78366932194acf57d307c5a734 = $(`<div id="html_3e2c0e78366932194acf57d307c5a734" style="width: 100.0%; height: 100.0%;"><b>Basaveshwar ITI</b><br>Type: ITI</div>`)[0];
+                popup_931ddc221e03171640844f845b2c6103.setContent(html_3e2c0e78366932194acf57d307c5a734);
+            
+        
+
+        marker_97a2f98c1b701a26e9ce4ae2b6618ab0.bindPopup(popup_931ddc221e03171640844f845b2c6103)
+        ;
+
+        
+    
+    
+                marker_97a2f98c1b701a26e9ce4ae2b6618ab0.setIcon(icon_70563992d078f370d3a8b9402dd2ef67);
+            
+    
+            var marker_375034ae53eeb01dad318818d79f6cf3 = L.marker(
+                [15.3638384, 75.1275701],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_69a82935437cc5ca8a7c6a96e70d31a7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_df692b8b19990f0782ba372a14e20dbf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e35e3b7f86b704e283872d5504e88b94 = $(`<div id="html_e35e3b7f86b704e283872d5504e88b94" style="width: 100.0%; height: 100.0%;"><b>Karnataka Lingayat Education Society ITI</b><br>Type: ITI</div>`)[0];
+                popup_df692b8b19990f0782ba372a14e20dbf.setContent(html_e35e3b7f86b704e283872d5504e88b94);
+            
+        
+
+        marker_375034ae53eeb01dad318818d79f6cf3.bindPopup(popup_df692b8b19990f0782ba372a14e20dbf)
+        ;
+
+        
+    
+    
+                marker_375034ae53eeb01dad318818d79f6cf3.setIcon(icon_69a82935437cc5ca8a7c6a96e70d31a7);
+            
+    
+            var marker_ecf840fe45784969bf7e5e91bf1ade19 = L.marker(
+                [15.3549819, 75.0887119],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_1dba8a06b7dfb2624f1ed1fa7df12e77 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7dbe5ebb0a8ad89e5b3584c6874c86d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9134c5e31f5af0c77815bf00d8112ed = $(`<div id="html_d9134c5e31f5af0c77815bf00d8112ed" style="width: 100.0%; height: 100.0%;"><b>Auto Cluster</b><br>Type: MSME</div>`)[0];
+                popup_7dbe5ebb0a8ad89e5b3584c6874c86d0.setContent(html_d9134c5e31f5af0c77815bf00d8112ed);
+            
+        
+
+        marker_ecf840fe45784969bf7e5e91bf1ade19.bindPopup(popup_7dbe5ebb0a8ad89e5b3584c6874c86d0)
+        ;
+
+        
+    
+    
+                marker_ecf840fe45784969bf7e5e91bf1ade19.setIcon(icon_1dba8a06b7dfb2624f1ed1fa7df12e77);
+            
+    
+            var marker_fbb41f914493866fd958a53cd7812bcf = L.marker(
+                [15.3549819, 75.0887119],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_ef3d03f5b478bac6debd9bf7a2df337a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5ef121f1fb4ccf0431fa9458c23de2da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e78992a8761574204cf9550b03d92d8d = $(`<div id="html_e78992a8761574204cf9550b03d92d8d" style="width: 100.0%; height: 100.0%;"><b>Readymade Garment Cluster</b><br>Type: MSME</div>`)[0];
+                popup_5ef121f1fb4ccf0431fa9458c23de2da.setContent(html_e78992a8761574204cf9550b03d92d8d);
+            
+        
+
+        marker_fbb41f914493866fd958a53cd7812bcf.bindPopup(popup_5ef121f1fb4ccf0431fa9458c23de2da)
+        ;
+
+        
+    
+    
+                marker_fbb41f914493866fd958a53cd7812bcf.setIcon(icon_ef3d03f5b478bac6debd9bf7a2df337a);
+            
+    
+            var marker_c60371da031f19f33f6cbc4e995e3e7f = L.marker(
+                [15.5307596, 74.910858],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_c76df420c3316f0a2fd9268f4cd78352 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6e6e61aa4ad26278a32d4d76ac29f01d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3554f2c20ebce7463248a1b17fb85ef0 = $(`<div id="html_3554f2c20ebce7463248a1b17fb85ef0" style="width: 100.0%; height: 100.0%;"><b>Belur Industrial Estate</b><br>Type: MSME</div>`)[0];
+                popup_6e6e61aa4ad26278a32d4d76ac29f01d.setContent(html_3554f2c20ebce7463248a1b17fb85ef0);
+            
+        
+
+        marker_c60371da031f19f33f6cbc4e995e3e7f.bindPopup(popup_6e6e61aa4ad26278a32d4d76ac29f01d)
+        ;
+
+        
+    
+    
+                marker_c60371da031f19f33f6cbc4e995e3e7f.setIcon(icon_c76df420c3316f0a2fd9268f4cd78352);
+            
+    
+            var marker_8bbe609693dcd2d94fcdf30289d04c21 = L.marker(
+                [15.5418405, 74.9032015],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_dd6eaca11b614cdb56497a9e8fbf8b5b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_855ed1e7aac15e793a85e3db609114b6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47c293713722ec837558de708d1ac841 = $(`<div id="html_47c293713722ec837558de708d1ac841" style="width: 100.0%; height: 100.0%;"><b>Kotur Industrial Estate</b><br>Type: MSME</div>`)[0];
+                popup_855ed1e7aac15e793a85e3db609114b6.setContent(html_47c293713722ec837558de708d1ac841);
+            
+        
+
+        marker_8bbe609693dcd2d94fcdf30289d04c21.bindPopup(popup_855ed1e7aac15e793a85e3db609114b6)
+        ;
+
+        
+    
+    
+                marker_8bbe609693dcd2d94fcdf30289d04c21.setIcon(icon_dd6eaca11b614cdb56497a9e8fbf8b5b);
+            
+    
+            var marker_b9c8c3aac23e30cbba6145b9a49afce3 = L.marker(
+                [15.3938408, 75.0820943],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_cab60755b330399fec7c240aa4545152 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_84202e12e49e7362e32cdb3475bacc93 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9be2fdfc7beb7f141b4c6c80d35fc64b = $(`<div id="html_9be2fdfc7beb7f141b4c6c80d35fc64b" style="width: 100.0%; height: 100.0%;"><b>Tungabhadra Industrial Estate</b><br>Type: MSME</div>`)[0];
+                popup_84202e12e49e7362e32cdb3475bacc93.setContent(html_9be2fdfc7beb7f141b4c6c80d35fc64b);
+            
+        
+
+        marker_b9c8c3aac23e30cbba6145b9a49afce3.bindPopup(popup_84202e12e49e7362e32cdb3475bacc93)
+        ;
+
+        
+    
+    
+                marker_b9c8c3aac23e30cbba6145b9a49afce3.setIcon(icon_cab60755b330399fec7c240aa4545152);
+            
+    
+            var marker_4cfbdedda50c45701c3516440b9c201a = L.marker(
+                [15.3550145, 75.0927544],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_26f67d95b00e25d7490b4ffe792e46ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3b47203db3c50bc0f26d96ef34d6565e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_da4a00b555917f418273702e650dc06b = $(`<div id="html_da4a00b555917f418273702e650dc06b" style="width: 100.0%; height: 100.0%;"><b>Gandhi Nagar Industrial Area</b><br>Type: MSME</div>`)[0];
+                popup_3b47203db3c50bc0f26d96ef34d6565e.setContent(html_da4a00b555917f418273702e650dc06b);
+            
+        
+
+        marker_4cfbdedda50c45701c3516440b9c201a.bindPopup(popup_3b47203db3c50bc0f26d96ef34d6565e)
+        ;
+
+        
+    
+    
+                marker_4cfbdedda50c45701c3516440b9c201a.setIcon(icon_26f67d95b00e25d7490b4ffe792e46ee);
+            
+    
+            var marker_4dbfa12cd7eccf132d4e5772179d79f5 = L.marker(
+                [15.3549819, 75.0887119],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_5e777a0fdb2e3fb3eb51e17313eb8052 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9042f52f00a78f8e71a9ec927802640b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53381b409a9199977c92285f3b01df5b = $(`<div id="html_53381b409a9199977c92285f3b01df5b" style="width: 100.0%; height: 100.0%;"><b>Garment Manufacturing Cluster</b><br>Type: MSME</div>`)[0];
+                popup_9042f52f00a78f8e71a9ec927802640b.setContent(html_53381b409a9199977c92285f3b01df5b);
+            
+        
+
+        marker_4dbfa12cd7eccf132d4e5772179d79f5.bindPopup(popup_9042f52f00a78f8e71a9ec927802640b)
+        ;
+
+        
+    
+    
+                marker_4dbfa12cd7eccf132d4e5772179d79f5.setIcon(icon_5e777a0fdb2e3fb3eb51e17313eb8052);
+            
+    
+            var marker_b6da27d8ed91f54a16372d241e2b39c0 = L.marker(
+                [15.4463211, 75.0035047],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_5fd52e3ee78b438783abdeab3af61c86 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fee864e8157f23376e836c6151bf894e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f94f134562687d4f4f93a782fc9ae13a = $(`<div id="html_f94f134562687d4f4f93a782fc9ae13a" style="width: 100.0%; height: 100.0%;"><b>Sri Guru Raghavendra ITI</b><br>Type: ITI</div>`)[0];
+                popup_fee864e8157f23376e836c6151bf894e.setContent(html_f94f134562687d4f4f93a782fc9ae13a);
+            
+        
+
+        marker_b6da27d8ed91f54a16372d241e2b39c0.bindPopup(popup_fee864e8157f23376e836c6151bf894e)
+        ;
+
+        
+    
+    
+                marker_b6da27d8ed91f54a16372d241e2b39c0.setIcon(icon_5fd52e3ee78b438783abdeab3af61c86);
+            
+    
+            var marker_c47f643e0f831cf11693fee0842a1c61 = L.marker(
+                [15.3620389, 75.1517872],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_91d244e802c0eaa19e50626fd1c10d44 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f7d3477374c54cd9a0db94547e07f3a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_217cb89d8140d635014bb97101b2d6ad = $(`<div id="html_217cb89d8140d635014bb97101b2d6ad" style="width: 100.0%; height: 100.0%;"><b>Sri Renukadevi ITI</b><br>Type: ITI</div>`)[0];
+                popup_f7d3477374c54cd9a0db94547e07f3a6.setContent(html_217cb89d8140d635014bb97101b2d6ad);
+            
+        
+
+        marker_c47f643e0f831cf11693fee0842a1c61.bindPopup(popup_f7d3477374c54cd9a0db94547e07f3a6)
+        ;
+
+        
+    
+    
+                marker_c47f643e0f831cf11693fee0842a1c61.setIcon(icon_91d244e802c0eaa19e50626fd1c10d44);
+            
+    
+            var marker_e343ea71f20910033c7ff3f3124bedd7 = L.marker(
+                [12.9869634, 77.5755584],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_68c50d4680912c250ce27dfa1a6d8234 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a34e3f3cf43b958a6c2794f1109ea1f2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1bd2e82fa6befb0671d76e8c79396519 = $(`<div id="html_1bd2e82fa6befb0671d76e8c79396519" style="width: 100.0%; height: 100.0%;"><b>Jnanajyothi ITI</b><br>Type: ITI</div>`)[0];
+                popup_a34e3f3cf43b958a6c2794f1109ea1f2.setContent(html_1bd2e82fa6befb0671d76e8c79396519);
+            
+        
+
+        marker_e343ea71f20910033c7ff3f3124bedd7.bindPopup(popup_a34e3f3cf43b958a6c2794f1109ea1f2)
+        ;
+
+        
+    
+    
+                marker_e343ea71f20910033c7ff3f3124bedd7.setIcon(icon_68c50d4680912c250ce27dfa1a6d8234);
+            
+    
+            var marker_d5e6814d603af22d4c6abd1dd672da2d = L.marker(
+                [12.87665, 75.0414429],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_944b7d56c3d5dcbd7eada8022c64e62e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1dfa6dc933cf34d2d474f8a3ab51a605 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_606810eae3db3875acb4642b34d074e7 = $(`<div id="html_606810eae3db3875acb4642b34d074e7" style="width: 100.0%; height: 100.0%;"><b>Shivakumara Swamy ITI</b><br>Type: ITI</div>`)[0];
+                popup_1dfa6dc933cf34d2d474f8a3ab51a605.setContent(html_606810eae3db3875acb4642b34d074e7);
+            
+        
+
+        marker_d5e6814d603af22d4c6abd1dd672da2d.bindPopup(popup_1dfa6dc933cf34d2d474f8a3ab51a605)
+        ;
+
+        
+    
+    
+                marker_d5e6814d603af22d4c6abd1dd672da2d.setIcon(icon_944b7d56c3d5dcbd7eada8022c64e62e);
+            
+    
+            var marker_ff365ca03b4980f3f7ea445c95fe0d6c = L.marker(
+                [15.3549819, 75.0887119],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_0b643e21bc8d6df7ee6e04ef213267c6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ece3f16b7545bf783da2b8d0e73c8321 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bebba69fc41da141995f56855c3380d1 = $(`<div id="html_bebba69fc41da141995f56855c3380d1" style="width: 100.0%; height: 100.0%;"><b>Mangalam ITI</b><br>Type: ITI</div>`)[0];
+                popup_ece3f16b7545bf783da2b8d0e73c8321.setContent(html_bebba69fc41da141995f56855c3380d1);
+            
+        
+
+        marker_ff365ca03b4980f3f7ea445c95fe0d6c.bindPopup(popup_ece3f16b7545bf783da2b8d0e73c8321)
+        ;
+
+        
+    
+    
+                marker_ff365ca03b4980f3f7ea445c95fe0d6c.setIcon(icon_0b643e21bc8d6df7ee6e04ef213267c6);
+            
+    
+            var marker_cd9076e4feace83f85218096a49195d4 = L.marker(
+                [12.9754896, 77.6072093],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_8ffaaffa4b4b0cefce9f4ecde40d280c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_56eb73c9ea30b06545e451056acfaa18 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_860f80f9592328c99487a7abfa794ee0 = $(`<div id="html_860f80f9592328c99487a7abfa794ee0" style="width: 100.0%; height: 100.0%;"><b>Shri Veerabhadreshwar ITI</b><br>Type: ITI</div>`)[0];
+                popup_56eb73c9ea30b06545e451056acfaa18.setContent(html_860f80f9592328c99487a7abfa794ee0);
+            
+        
+
+        marker_cd9076e4feace83f85218096a49195d4.bindPopup(popup_56eb73c9ea30b06545e451056acfaa18)
+        ;
+
+        
+    
+    
+                marker_cd9076e4feace83f85218096a49195d4.setIcon(icon_8ffaaffa4b4b0cefce9f4ecde40d280c);
+            
+    
+            var marker_b11dc8f492b875f7be69225943208865 = L.marker(
+                [15.3509149, 75.1415704],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_98ca8b79cd9e7641e1e2aaf01e560156 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4020dd7b63cdc87ea8df4ca372e2c88f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1276da157d1f71360f32958a106d591 = $(`<div id="html_a1276da157d1f71360f32958a106d591" style="width: 100.0%; height: 100.0%;"><b>Venkateshwara ITI</b><br>Type: ITI</div>`)[0];
+                popup_4020dd7b63cdc87ea8df4ca372e2c88f.setContent(html_a1276da157d1f71360f32958a106d591);
+            
+        
+
+        marker_b11dc8f492b875f7be69225943208865.bindPopup(popup_4020dd7b63cdc87ea8df4ca372e2c88f)
+        ;
+
+        
+    
+    
+                marker_b11dc8f492b875f7be69225943208865.setIcon(icon_98ca8b79cd9e7641e1e2aaf01e560156);
+            
+    
+            var marker_acb34da3d4ef24aba80e65a4cfa3abc0 = L.marker(
+                [15.3502103, 75.1373055],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_e3f227242126dfb890681e84de9f575a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7d517a8cc89924745101205f48cc6e9f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19396cab51efd3d4af561207bdaef4fc = $(`<div id="html_19396cab51efd3d4af561207bdaef4fc" style="width: 100.0%; height: 100.0%;"><b>Basava ITI Kalghatgi</b><br>Type: ITI</div>`)[0];
+                popup_7d517a8cc89924745101205f48cc6e9f.setContent(html_19396cab51efd3d4af561207bdaef4fc);
+            
+        
+
+        marker_acb34da3d4ef24aba80e65a4cfa3abc0.bindPopup(popup_7d517a8cc89924745101205f48cc6e9f)
+        ;
+
+        
+    
+    
+                marker_acb34da3d4ef24aba80e65a4cfa3abc0.setIcon(icon_e3f227242126dfb890681e84de9f575a);
+            
+    
+            var marker_e41d600dff3e0243c3add7ec2a083553 = L.marker(
+                [15.4441951, 74.9752534],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_a3c6970a544f25186130b88eac240e9d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c992c30c9c44a973289235e59ce555eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13bb3fe7c18980e4d368b1556db20173 = $(`<div id="html_13bb3fe7c18980e4d368b1556db20173" style="width: 100.0%; height: 100.0%;"><b>Govt ITI Kundgol</b><br>Type: ITI</div>`)[0];
+                popup_c992c30c9c44a973289235e59ce555eb.setContent(html_13bb3fe7c18980e4d368b1556db20173);
+            
+        
+
+        marker_e41d600dff3e0243c3add7ec2a083553.bindPopup(popup_c992c30c9c44a973289235e59ce555eb)
+        ;
+
+        
+    
+    
+                marker_e41d600dff3e0243c3add7ec2a083553.setIcon(icon_a3c6970a544f25186130b88eac240e9d);
+            
+    
+            var marker_ab49e7369b70c9d3cfd408655e2671ba = L.marker(
+                [15.3526555, 75.160684],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_f71f28c874f898afeb3ad2fa3aba0e44 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c4d48989bfca43864fb3cbd9c2bceaf3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3574276129ae38332edd1e8c5379e840 = $(`<div id="html_3574276129ae38332edd1e8c5379e840" style="width: 100.0%; height: 100.0%;"><b>Govt ITI Annigeri</b><br>Type: ITI</div>`)[0];
+                popup_c4d48989bfca43864fb3cbd9c2bceaf3.setContent(html_3574276129ae38332edd1e8c5379e840);
+            
+        
+
+        marker_ab49e7369b70c9d3cfd408655e2671ba.bindPopup(popup_c4d48989bfca43864fb3cbd9c2bceaf3)
+        ;
+
+        
+    
+    
+                marker_ab49e7369b70c9d3cfd408655e2671ba.setIcon(icon_f71f28c874f898afeb3ad2fa3aba0e44);
+            
+    
+            var marker_8b245438e8c96c4e20633780e1b7ace2 = L.marker(
+                [15.851058, 74.5103378],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_4a36378f5b3af241c4070b67905fea93 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_66d849e96215c20b83e4eae310c2e65b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bd1a0cfbf087bd86c273ce403cac6e1e = $(`<div id="html_bd1a0cfbf087bd86c273ce403cac6e1e" style="width: 100.0%; height: 100.0%;"><b>St. Michael's ITI</b><br>Type: ITI</div>`)[0];
+                popup_66d849e96215c20b83e4eae310c2e65b.setContent(html_bd1a0cfbf087bd86c273ce403cac6e1e);
+            
+        
+
+        marker_8b245438e8c96c4e20633780e1b7ace2.bindPopup(popup_66d849e96215c20b83e4eae310c2e65b)
+        ;
+
+        
+    
+    
+                marker_8b245438e8c96c4e20633780e1b7ace2.setIcon(icon_4a36378f5b3af241c4070b67905fea93);
+            
+    
+            var marker_ddaa19a3cff45eaba1ba4239624e69bc = L.marker(
+                [15.3624563, 75.1409942],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_d727c72b6504de33723bba2a95584183 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_54819721aa871a4964b4b2532fcbf1a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4936978dbe3ba227a154fba391b43cf1 = $(`<div id="html_4936978dbe3ba227a154fba391b43cf1" style="width: 100.0%; height: 100.0%;"><b>Shree ITI</b><br>Type: ITI</div>`)[0];
+                popup_54819721aa871a4964b4b2532fcbf1a2.setContent(html_4936978dbe3ba227a154fba391b43cf1);
+            
+        
+
+        marker_ddaa19a3cff45eaba1ba4239624e69bc.bindPopup(popup_54819721aa871a4964b4b2532fcbf1a2)
+        ;
+
+        
+    
+    
+                marker_ddaa19a3cff45eaba1ba4239624e69bc.setIcon(icon_d727c72b6504de33723bba2a95584183);
+            
+    
+            var marker_6b5b0af669796b66bdddc268269acf18 = L.marker(
+                [15.5399001, 75.0581951],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_1a563e77fc4fcbb3f56cf7b675bd128a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4266893b4016287e000fc975755f40f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b97446444ff8d56424147e6143a0808d = $(`<div id="html_b97446444ff8d56424147e6143a0808d" style="width: 100.0%; height: 100.0%;"><b>Basaveshwara Rural ITI</b><br>Type: ITI</div>`)[0];
+                popup_4266893b4016287e000fc975755f40f1.setContent(html_b97446444ff8d56424147e6143a0808d);
+            
+        
+
+        marker_6b5b0af669796b66bdddc268269acf18.bindPopup(popup_4266893b4016287e000fc975755f40f1)
+        ;
+
+        
+    
+    
+                marker_6b5b0af669796b66bdddc268269acf18.setIcon(icon_1a563e77fc4fcbb3f56cf7b675bd128a);
+            
+    
+            var marker_ef7697d94939ded2e068aa10d6770898 = L.marker(
+                [12.9869634, 77.5755584],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_6ddbd2b5a7b5a9fc67d8d22315209291 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5cd282d7381609b5024c8de5f5f1452d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6805b1ecab1ef6959721847e3de280bc = $(`<div id="html_6805b1ecab1ef6959721847e3de280bc" style="width: 100.0%; height: 100.0%;"><b>Nehru ITI</b><br>Type: ITI</div>`)[0];
+                popup_5cd282d7381609b5024c8de5f5f1452d.setContent(html_6805b1ecab1ef6959721847e3de280bc);
+            
+        
+
+        marker_ef7697d94939ded2e068aa10d6770898.bindPopup(popup_5cd282d7381609b5024c8de5f5f1452d)
+        ;
+
+        
+    
+    
+                marker_ef7697d94939ded2e068aa10d6770898.setIcon(icon_6ddbd2b5a7b5a9fc67d8d22315209291);
+            
+    
+            var marker_2bef89e7df39a0cdb93a8aed4c5f8e0d = L.marker(
+                [15.3938408, 75.0820943],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_d36543231f09f837e58cccacfcd7b5ff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c762d32d23ab14486ac927704587a25e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a996c9305718ffacb4068bd9a521bddf = $(`<div id="html_a996c9305718ffacb4068bd9a521bddf" style="width: 100.0%; height: 100.0%;"><b>Navanagar ITI</b><br>Type: ITI</div>`)[0];
+                popup_c762d32d23ab14486ac927704587a25e.setContent(html_a996c9305718ffacb4068bd9a521bddf);
+            
+        
+
+        marker_2bef89e7df39a0cdb93a8aed4c5f8e0d.bindPopup(popup_c762d32d23ab14486ac927704587a25e)
+        ;
+
+        
+    
+    
+                marker_2bef89e7df39a0cdb93a8aed4c5f8e0d.setIcon(icon_d36543231f09f837e58cccacfcd7b5ff);
+            
+    
+            var marker_6b56f066b0c740e8455fda5078748a37 = L.marker(
+                [15.2077105, 75.1387568],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_c1e775bc13d6cd824dd9627f0536cdd3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_524493101ea59dc0851ee98f13b41dcf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f62738be8915ab8370b40b6222a95c2 = $(`<div id="html_7f62738be8915ab8370b40b6222a95c2" style="width: 100.0%; height: 100.0%;"><b>VRL Logistics Ltd Workshop</b><br>Type: MSME</div>`)[0];
+                popup_524493101ea59dc0851ee98f13b41dcf.setContent(html_7f62738be8915ab8370b40b6222a95c2);
+            
+        
+
+        marker_6b56f066b0c740e8455fda5078748a37.bindPopup(popup_524493101ea59dc0851ee98f13b41dcf)
+        ;
+
+        
+    
+    
+                marker_6b56f066b0c740e8455fda5078748a37.setIcon(icon_c1e775bc13d6cd824dd9627f0536cdd3);
+            
+    
+            var marker_c2a66c21a0f318e060ad5854ad62c1fb = L.marker(
+                [15.3549819, 75.0887119],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_9f3f8f9ae7f24d7089811161eba64d34 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d7fac2baec72c475bf4dbb4f8b9a25f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e92b311887e3c389d96c287b4a77414b = $(`<div id="html_e92b311887e3c389d96c287b4a77414b" style="width: 100.0%; height: 100.0%;"><b>Hope Electrodes Pvt. Ltd.</b><br>Type: MSME</div>`)[0];
+                popup_d7fac2baec72c475bf4dbb4f8b9a25f1.setContent(html_e92b311887e3c389d96c287b4a77414b);
+            
+        
+
+        marker_c2a66c21a0f318e060ad5854ad62c1fb.bindPopup(popup_d7fac2baec72c475bf4dbb4f8b9a25f1)
+        ;
+
+        
+    
+    
+                marker_c2a66c21a0f318e060ad5854ad62c1fb.setIcon(icon_9f3f8f9ae7f24d7089811161eba64d34);
+            
+    
+            var marker_4ad36c9deb5e241e6d562b2ee7ca2655 = L.marker(
+                [15.3549819, 75.0887119],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_e0bcff92dddbaae60c29d374ec4bfeb0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3cd24c54dc0531d2fe8decd551b7f38e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2d19859f345fa87e486945f111ebe777 = $(`<div id="html_2d19859f345fa87e486945f111ebe777" style="width: 100.0%; height: 100.0%;"><b>Apex Auto Pvt. Ltd.</b><br>Type: MSME</div>`)[0];
+                popup_3cd24c54dc0531d2fe8decd551b7f38e.setContent(html_2d19859f345fa87e486945f111ebe777);
+            
+        
+
+        marker_4ad36c9deb5e241e6d562b2ee7ca2655.bindPopup(popup_3cd24c54dc0531d2fe8decd551b7f38e)
+        ;
+
+        
+    
+    
+                marker_4ad36c9deb5e241e6d562b2ee7ca2655.setIcon(icon_e0bcff92dddbaae60c29d374ec4bfeb0);
+            
+    
+            var marker_c48b0738834262cd50ef54a6777ebb69 = L.marker(
+                [15.4075368, 75.0688062],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_adc9c36a7ff82b4f7e0ed7793a1e5cd3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3cf2fa82a73de94ac2440770adec2147 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2aaddb16a12df85ccc207151352dd5c9 = $(`<div id="html_2aaddb16a12df85ccc207151352dd5c9" style="width: 100.0%; height: 100.0%;"><b>Rayapur Industrial Area</b><br>Type: MSME</div>`)[0];
+                popup_3cf2fa82a73de94ac2440770adec2147.setContent(html_2aaddb16a12df85ccc207151352dd5c9);
+            
+        
+
+        marker_c48b0738834262cd50ef54a6777ebb69.bindPopup(popup_3cf2fa82a73de94ac2440770adec2147)
+        ;
+
+        
+    
+    
+                marker_c48b0738834262cd50ef54a6777ebb69.setIcon(icon_adc9c36a7ff82b4f7e0ed7793a1e5cd3);
+            
+    
+            var marker_2c97e945409ddac7794bc2509a652113 = L.marker(
+                [15.3598653, 75.0466235],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_0d57363b1550bf6942b516830d16df96 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_50473b5a38d2a06859e82f8e69fb6178 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c118dda1e2cbf7e9778ad8b823e93167 = $(`<div id="html_c118dda1e2cbf7e9778ad8b823e93167" style="width: 100.0%; height: 100.0%;"><b>Tarihal Industrial Area</b><br>Type: MSME</div>`)[0];
+                popup_50473b5a38d2a06859e82f8e69fb6178.setContent(html_c118dda1e2cbf7e9778ad8b823e93167);
+            
+        
+
+        marker_2c97e945409ddac7794bc2509a652113.bindPopup(popup_50473b5a38d2a06859e82f8e69fb6178)
+        ;
+
+        
+    
+    
+                marker_2c97e945409ddac7794bc2509a652113.setIcon(icon_0d57363b1550bf6942b516830d16df96);
+            
+    
+            var marker_8e0816eaaab518d4825c0ccd65be0cb1 = L.marker(
+                [15.3796519, 75.0760526],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_b4b093866f4bc3f918ac654e07d75f1a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d7247f4fdb1b4aa976890dc001d8bcc4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad26c054c13f6ebcb1b1a7140f0245d7 = $(`<div id="html_ad26c054c13f6ebcb1b1a7140f0245d7" style="width: 100.0%; height: 100.0%;"><b>Gamanagatti Industrial Area</b><br>Type: MSME</div>`)[0];
+                popup_d7247f4fdb1b4aa976890dc001d8bcc4.setContent(html_ad26c054c13f6ebcb1b1a7140f0245d7);
+            
+        
+
+        marker_8e0816eaaab518d4825c0ccd65be0cb1.bindPopup(popup_d7247f4fdb1b4aa976890dc001d8bcc4)
+        ;
+
+        
+    
+    
+                marker_8e0816eaaab518d4825c0ccd65be0cb1.setIcon(icon_b4b093866f4bc3f918ac654e07d75f1a);
+            
+    
+            var marker_85b10299eb1a23a8d9bace66648554b1 = L.marker(
+                [15.3598653, 75.0466235],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_9ea9bd07f10463cf48cf806c69d857e6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c1b9a98f31586f484860050d2b1a1af3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61900e94bd13a52a339f75b64b45c1e6 = $(`<div id="html_61900e94bd13a52a339f75b64b45c1e6" style="width: 100.0%; height: 100.0%;"><b>Electronics Manufacturing Cluster</b><br>Type: MSME</div>`)[0];
+                popup_c1b9a98f31586f484860050d2b1a1af3.setContent(html_61900e94bd13a52a339f75b64b45c1e6);
+            
+        
+
+        marker_85b10299eb1a23a8d9bace66648554b1.bindPopup(popup_c1b9a98f31586f484860050d2b1a1af3)
+        ;
+
+        
+    
+    
+                marker_85b10299eb1a23a8d9bace66648554b1.setIcon(icon_9ea9bd07f10463cf48cf806c69d857e6);
+            
+    
+            var marker_93a957ebf2231d7e5b0c868c3d89dcb9 = L.marker(
+                [19.1150791, 72.9332634],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_a960bdc20898db37b04e565c177472f7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4208fb06c023bedea2e29d8e5828bb9e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a6f894c241bac36ab95fea42e8ff350c = $(`<div id="html_a6f894c241bac36ab95fea42e8ff350c" style="width: 100.0%; height: 100.0%;"><b>Furniture Cluster</b><br>Type: MSME</div>`)[0];
+                popup_4208fb06c023bedea2e29d8e5828bb9e.setContent(html_a6f894c241bac36ab95fea42e8ff350c);
+            
+        
+
+        marker_93a957ebf2231d7e5b0c868c3d89dcb9.bindPopup(popup_4208fb06c023bedea2e29d8e5828bb9e)
+        ;
+
+        
+    
+    
+                marker_93a957ebf2231d7e5b0c868c3d89dcb9.setIcon(icon_a960bdc20898db37b04e565c177472f7);
+            
+    
+            var marker_1883de47e1b3906f0191e96f97bb3d87 = L.marker(
+                [15.3620389, 75.1517872],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_2ed47f85bed00fb89bf04e81ff403e82 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b77ed81bcb3683889609950b937b0970 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2ccf3b7f5552977038377c9250a906d = $(`<div id="html_e2ccf3b7f5552977038377c9250a906d" style="width: 100.0%; height: 100.0%;"><b>Printing Cluster</b><br>Type: MSME</div>`)[0];
+                popup_b77ed81bcb3683889609950b937b0970.setContent(html_e2ccf3b7f5552977038377c9250a906d);
+            
+        
+
+        marker_1883de47e1b3906f0191e96f97bb3d87.bindPopup(popup_b77ed81bcb3683889609950b937b0970)
+        ;
+
+        
+    
+    
+                marker_1883de47e1b3906f0191e96f97bb3d87.setIcon(icon_2ed47f85bed00fb89bf04e81ff403e82);
+            
+    
+            var marker_8dac3526a05db04d9a898dbb5261ff41 = L.marker(
+                [15.3938408, 75.0820943],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_fce5e34b79f196dacc4b543ef6d54ec0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cd34c1154bef92bda01826e966de326b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ed0d712bdc86e72ea275834e892a36d = $(`<div id="html_3ed0d712bdc86e72ea275834e892a36d" style="width: 100.0%; height: 100.0%;"><b>Food Processing Cluster</b><br>Type: MSME</div>`)[0];
+                popup_cd34c1154bef92bda01826e966de326b.setContent(html_3ed0d712bdc86e72ea275834e892a36d);
+            
+        
+
+        marker_8dac3526a05db04d9a898dbb5261ff41.bindPopup(popup_cd34c1154bef92bda01826e966de326b)
+        ;
+
+        
+    
+    
+                marker_8dac3526a05db04d9a898dbb5261ff41.setIcon(icon_fce5e34b79f196dacc4b543ef6d54ec0);
+            
+    
+            var marker_947679eaefee203c721b0c157087a25c = L.marker(
+                [15.3549819, 75.0887119],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_6aaa88435794dab1e99397164495fd38 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5c1cec973b2e42831629d85c9691689a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cbca7eb347562772182073c894c69bd4 = $(`<div id="html_cbca7eb347562772182073c894c69bd4" style="width: 100.0%; height: 100.0%;"><b>FMCG Cluster</b><br>Type: MSME</div>`)[0];
+                popup_5c1cec973b2e42831629d85c9691689a.setContent(html_cbca7eb347562772182073c894c69bd4);
+            
+        
+
+        marker_947679eaefee203c721b0c157087a25c.bindPopup(popup_5c1cec973b2e42831629d85c9691689a)
+        ;
+
+        
+    
+    
+                marker_947679eaefee203c721b0c157087a25c.setIcon(icon_6aaa88435794dab1e99397164495fd38);
+            
+    
+            var marker_b8676644b0ff7f427e2e9192922395f0 = L.marker(
+                [15.3638384, 75.1275701],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_87c8380a625246eb3b2a6f3d0d2d78cf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6367d52d5a4be98592422945b76939ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb616c5d4bb0bfdfb8c8adf97e1eccc9 = $(`<div id="html_cb616c5d4bb0bfdfb8c8adf97e1eccc9" style="width: 100.0%; height: 100.0%;"><b>Sanitary Ware Cluster</b><br>Type: MSME</div>`)[0];
+                popup_6367d52d5a4be98592422945b76939ac.setContent(html_cb616c5d4bb0bfdfb8c8adf97e1eccc9);
+            
+        
+
+        marker_b8676644b0ff7f427e2e9192922395f0.bindPopup(popup_6367d52d5a4be98592422945b76939ac)
+        ;
+
+        
+    
+    
+                marker_b8676644b0ff7f427e2e9192922395f0.setIcon(icon_87c8380a625246eb3b2a6f3d0d2d78cf);
+            
+    
+            var marker_5c15b9e5af768e92e4866a94bc40ddde = L.marker(
+                [15.3598653, 75.0466235],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_dc9e60ecefc547b261003c583ebe0220 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_33ff463a98e0f05db3b9fac1919f57bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_edf2f784f718dd1a3d0557ffff6a4f3e = $(`<div id="html_edf2f784f718dd1a3d0557ffff6a4f3e" style="width: 100.0%; height: 100.0%;"><b>Vibhava Industries</b><br>Type: MSME</div>`)[0];
+                popup_33ff463a98e0f05db3b9fac1919f57bf.setContent(html_edf2f784f718dd1a3d0557ffff6a4f3e);
+            
+        
+
+        marker_5c15b9e5af768e92e4866a94bc40ddde.bindPopup(popup_33ff463a98e0f05db3b9fac1919f57bf)
+        ;
+
+        
+    
+    
+                marker_5c15b9e5af768e92e4866a94bc40ddde.setIcon(icon_dc9e60ecefc547b261003c583ebe0220);
+            
+    
+            var marker_7bcf6d830fc25033169c417444083d3f = L.marker(
+                [15.3549819, 75.0887119],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_9d2493dd93c7b1e6834673ce65723bf7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_534a33c10421ff0bdacb190a80eb6919 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b6c84c9aac793f6a9fb3a454abaeda2 = $(`<div id="html_7b6c84c9aac793f6a9fb3a454abaeda2" style="width: 100.0%; height: 100.0%;"><b>Pai Profiles Pvt. Ltd.</b><br>Type: MSME</div>`)[0];
+                popup_534a33c10421ff0bdacb190a80eb6919.setContent(html_7b6c84c9aac793f6a9fb3a454abaeda2);
+            
+        
+
+        marker_7bcf6d830fc25033169c417444083d3f.bindPopup(popup_534a33c10421ff0bdacb190a80eb6919)
+        ;
+
+        
+    
+    
+                marker_7bcf6d830fc25033169c417444083d3f.setIcon(icon_9d2493dd93c7b1e6834673ce65723bf7);
+            
+    
+            var marker_ce7c61624bbaabb57c1b7ffe23bf9731 = L.marker(
+                [15.5064215, 74.9155042],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_2aa4a7258f6df9d6e4f3c869fbf0c088 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2401da3b6d00a947818f4683391570b8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2c6b9a6d838b49e64f3b945233f8bf30 = $(`<div id="html_2c6b9a6d838b49e64f3b945233f8bf30" style="width: 100.0%; height: 100.0%;"><b>Shakti Engineering Works</b><br>Type: MSME</div>`)[0];
+                popup_2401da3b6d00a947818f4683391570b8.setContent(html_2c6b9a6d838b49e64f3b945233f8bf30);
+            
+        
+
+        marker_ce7c61624bbaabb57c1b7ffe23bf9731.bindPopup(popup_2401da3b6d00a947818f4683391570b8)
+        ;
+
+        
+    
+    
+                marker_ce7c61624bbaabb57c1b7ffe23bf9731.setIcon(icon_2aa4a7258f6df9d6e4f3c869fbf0c088);
+            
+    
+            var marker_e0271910030b94860cfd3a6180793549 = L.marker(
+                [15.3598653, 75.0466235],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_16ea6b4d791323ebb602fa35b3900736 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0cfd4e140a6162536c367c73ef04961f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e02cad9f3b51bff474d0f738c3d3baf = $(`<div id="html_8e02cad9f3b51bff474d0f738c3d3baf" style="width: 100.0%; height: 100.0%;"><b>Hubli Coats & Tubes Pvt Ltd</b><br>Type: MSME</div>`)[0];
+                popup_0cfd4e140a6162536c367c73ef04961f.setContent(html_8e02cad9f3b51bff474d0f738c3d3baf);
+            
+        
+
+        marker_e0271910030b94860cfd3a6180793549.bindPopup(popup_0cfd4e140a6162536c367c73ef04961f)
+        ;
+
+        
+    
+    
+                marker_e0271910030b94860cfd3a6180793549.setIcon(icon_16ea6b4d791323ebb602fa35b3900736);
+            
+    
+            var marker_e604af12b5de5a4c6319764c48a66186 = L.marker(
+                [15.5064215, 74.9155042],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_6e5ad1d0f8bf30f5e8456efa0af2f02f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5cd07914c10b479d624e9c940b5c75ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_912591ecfe7a715073246d27bfe2d797 = $(`<div id="html_912591ecfe7a715073246d27bfe2d797" style="width: 100.0%; height: 100.0%;"><b>Walvoil Fluid Power India</b><br>Type: MSME</div>`)[0];
+                popup_5cd07914c10b479d624e9c940b5c75ed.setContent(html_912591ecfe7a715073246d27bfe2d797);
+            
+        
+
+        marker_e604af12b5de5a4c6319764c48a66186.bindPopup(popup_5cd07914c10b479d624e9c940b5c75ed)
+        ;
+
+        
+    
+    
+                marker_e604af12b5de5a4c6319764c48a66186.setIcon(icon_6e5ad1d0f8bf30f5e8456efa0af2f02f);
+            
+    
+            var marker_73e1d0ffd84c9d260bcc889fc1b98da9 = L.marker(
+                [15.3938408, 75.0820943],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_b988e025e74ffd03f84f639da16b8573 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f05e1dc95a8c30dbe2efb7aa7fb76b5e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1dfbffba9e9f7ce08d790eeaf1d94930 = $(`<div id="html_1dfbffba9e9f7ce08d790eeaf1d94930" style="width: 100.0%; height: 100.0%;"><b>Classic Engineering Construction</b><br>Type: MSME</div>`)[0];
+                popup_f05e1dc95a8c30dbe2efb7aa7fb76b5e.setContent(html_1dfbffba9e9f7ce08d790eeaf1d94930);
+            
+        
+
+        marker_73e1d0ffd84c9d260bcc889fc1b98da9.bindPopup(popup_f05e1dc95a8c30dbe2efb7aa7fb76b5e)
+        ;
+
+        
+    
+    
+                marker_73e1d0ffd84c9d260bcc889fc1b98da9.setIcon(icon_b988e025e74ffd03f84f639da16b8573);
+            
+    
+            var marker_f40e536dd307dc56c1bbe50c43dd1139 = L.marker(
+                [15.3549819, 75.0887119],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_873d654ce068193cd5a4d6ba09f812e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_915e69da2a9ee40bad67104246d6143f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9dafd22b181acbc6c70ec5187755581b = $(`<div id="html_9dafd22b181acbc6c70ec5187755581b" style="width: 100.0%; height: 100.0%;"><b>DTDC Express Hub</b><br>Type: MSME</div>`)[0];
+                popup_915e69da2a9ee40bad67104246d6143f.setContent(html_9dafd22b181acbc6c70ec5187755581b);
+            
+        
+
+        marker_f40e536dd307dc56c1bbe50c43dd1139.bindPopup(popup_915e69da2a9ee40bad67104246d6143f)
+        ;
+
+        
+    
+    
+                marker_f40e536dd307dc56c1bbe50c43dd1139.setIcon(icon_873d654ce068193cd5a4d6ba09f812e5);
+            
+    
+            var marker_3bd97bd74e4ddc3399c877bc4e54537b = L.marker(
+                [15.3825442, 75.1105557],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_150657c283ae70ced4f412eacd13183d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0247abfdb18d0b93bc82ab920f0a6527 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ed44029cc565d4c287ed8984933b3e1 = $(`<div id="html_3ed44029cc565d4c287ed8984933b3e1" style="width: 100.0%; height: 100.0%;"><b>Sri Ganesh Enterprises</b><br>Type: MSME</div>`)[0];
+                popup_0247abfdb18d0b93bc82ab920f0a6527.setContent(html_3ed44029cc565d4c287ed8984933b3e1);
+            
+        
+
+        marker_3bd97bd74e4ddc3399c877bc4e54537b.bindPopup(popup_0247abfdb18d0b93bc82ab920f0a6527)
+        ;
+
+        
+    
+    
+                marker_3bd97bd74e4ddc3399c877bc4e54537b.setIcon(icon_150657c283ae70ced4f412eacd13183d);
+            
+    
+            var marker_611d3d3e422edaa365ab00fd8239394f = L.marker(
+                [15.3549819, 75.0887119],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_f37bb50ebb06da1de09e7d7c663ab377 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a6ccf13f7e21cab155984f3d16c4adbf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2701e99309f2f09fdea95a15f5c6489c = $(`<div id="html_2701e99309f2f09fdea95a15f5c6489c" style="width: 100.0%; height: 100.0%;"><b>Vinayaka Metals Works</b><br>Type: MSME</div>`)[0];
+                popup_a6ccf13f7e21cab155984f3d16c4adbf.setContent(html_2701e99309f2f09fdea95a15f5c6489c);
+            
+        
+
+        marker_611d3d3e422edaa365ab00fd8239394f.bindPopup(popup_a6ccf13f7e21cab155984f3d16c4adbf)
+        ;
+
+        
+    
+    
+                marker_611d3d3e422edaa365ab00fd8239394f.setIcon(icon_f37bb50ebb06da1de09e7d7c663ab377);
+            
+    
+            var marker_ce8a78ee2be8c4162d78f30f2c3781dc = L.marker(
+                [15.3757321, 75.0481907],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_e692f710a71e32aaa0a3c099d970a2b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_53ebd5a5a69b0619925176844f002cee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dbc97a124538a15beb5a22b941d6a209 = $(`<div id="html_dbc97a124538a15beb5a22b941d6a209" style="width: 100.0%; height: 100.0%;"><b>Uflex Ltd</b><br>Type: MSME</div>`)[0];
+                popup_53ebd5a5a69b0619925176844f002cee.setContent(html_dbc97a124538a15beb5a22b941d6a209);
+            
+        
+
+        marker_ce8a78ee2be8c4162d78f30f2c3781dc.bindPopup(popup_53ebd5a5a69b0619925176844f002cee)
+        ;
+
+        
+    
+    
+                marker_ce8a78ee2be8c4162d78f30f2c3781dc.setIcon(icon_e692f710a71e32aaa0a3c099d970a2b4);
+            
+    
+            var marker_b229fb003c87f687eef2f10d64b2a41d = L.marker(
+                [13.1645671, 75.8634851],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_671118369d1f1e5c5fb4cc7cec32b54c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0f60e5dc8d9c5b4b6861df34488355e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b27fd1b37d755a7d6979377c6097a79c = $(`<div id="html_b27fd1b37d755a7d6979377c6097a79c" style="width: 100.0%; height: 100.0%;"><b>Agro-Food Processing Cluster</b><br>Type: MSME</div>`)[0];
+                popup_0f60e5dc8d9c5b4b6861df34488355e4.setContent(html_b27fd1b37d755a7d6979377c6097a79c);
+            
+        
+
+        marker_b229fb003c87f687eef2f10d64b2a41d.bindPopup(popup_0f60e5dc8d9c5b4b6861df34488355e4)
+        ;
+
+        
+    
+    
+                marker_b229fb003c87f687eef2f10d64b2a41d.setIcon(icon_671118369d1f1e5c5fb4cc7cec32b54c);
+            
+    
+            var marker_792f4322f545966f0b31ed1e5fd67af9 = L.marker(
+                [15.3598653, 75.0466235],
+                {
+}
+            ).addTo(map_4ffde210095775048dcba36760e05f34);
+        
+    
+            var icon_e7fe9e0f0873e0c6f32f7efaa7c7a8c6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bc31a88b93c225d03c39580d22c62f71 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_58c85f38c9714bd49a900f9357a5cc57 = $(`<div id="html_58c85f38c9714bd49a900f9357a5cc57" style="width: 100.0%; height: 100.0%;"><b>Foundry Cluster</b><br>Type: MSME</div>`)[0];
+                popup_bc31a88b93c225d03c39580d22c62f71.setContent(html_58c85f38c9714bd49a900f9357a5cc57);
+            
+        
+
+        marker_792f4322f545966f0b31ed1e5fd67af9.bindPopup(popup_bc31a88b93c225d03c39580d22c62f71)
+        ;
+
+        
+    
+    
+                marker_792f4322f545966f0b31ed1e5fd67af9.setIcon(icon_e7fe9e0f0873e0c6f32f7efaa7c7a8c6);
+            
+    
+            var heat_map_5ed8752db3989afde242996fa1af58f8 = L.heatLayer(
+                [[15.3638384, 75.1275701], [15.3233746, 75.1263033], [15.3638384, 75.1275701], [15.3440054, 75.1458667], [15.3558762, 75.1274944], [15.3549819, 75.0887119], [15.3598653, 75.0466235], [15.3638384, 75.1275701], [15.3549819, 75.0887119], [15.3549819, 75.0887119], [15.5307596, 74.910858], [15.5418405, 74.9032015], [15.3938408, 75.0820943], [15.3550145, 75.0927544], [15.3549819, 75.0887119], [15.4463211, 75.0035047], [15.3620389, 75.1517872], [12.9869634, 77.5755584], [12.87665, 75.0414429], [15.3549819, 75.0887119], [12.9754896, 77.6072093], [15.3509149, 75.1415704], [15.3502103, 75.1373055], [15.4441951, 74.9752534], [15.3526555, 75.160684], [15.851058, 74.5103378], [15.3624563, 75.1409942], [15.5399001, 75.0581951], [12.9869634, 77.5755584], [15.3938408, 75.0820943], [15.2077105, 75.1387568], [15.3549819, 75.0887119], [15.3549819, 75.0887119], [15.4075368, 75.0688062], [15.3598653, 75.0466235], [15.3796519, 75.0760526], [15.3598653, 75.0466235], [19.1150791, 72.9332634], [15.3620389, 75.1517872], [15.3938408, 75.0820943], [15.3549819, 75.0887119], [15.3638384, 75.1275701], [15.3598653, 75.0466235], [15.3549819, 75.0887119], [15.5064215, 74.9155042], [15.3598653, 75.0466235], [15.5064215, 74.9155042], [15.3938408, 75.0820943], [15.3549819, 75.0887119], [15.3825442, 75.1105557], [15.3549819, 75.0887119], [15.3757321, 75.0481907], [13.1645671, 75.8634851], [15.3598653, 75.0466235]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_5ed8752db3989afde242996fa1af58f8.addTo(map_4ffde210095775048dcba36760e05f34);
+        
+</script>
+</html>

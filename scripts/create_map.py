@@ -1,161 +1,96 @@
 import pandas as pd
 import folium
-from folium.plugins import HeatMap, MarkerCluster
-import os
+from folium.plugins import HeatMap
 
-# --- Configuration ---
+# --- Configuration: Update these variables to match your file ---
+
+# 1. Path to your geocoded CSV file
 CSV_FILE_PATH = 'Geocoded_ITI_MSME_Locations.csv'
 
-# Column names from your CSV
+# 2. Column names in your CSV file (must match exactly)
 LATITUDE_COL = 'Latitude'
 LONGITUDE_COL = 'Longitude'
 NAME_COL = 'Name'
-TYPE_COL = 'Type'
+TYPE_COL = 'Type' # This column is used for color-coding pins
 
-# Map settings
-MAP_CENTER = [15.40, 75.05]  # Centered on Hubli-Dharwad
+# 3. Map settings
+# Coordinates for the center of the Hubli-Dharwad region
+MAP_CENTER = [15.40, 75.05] 
 MAP_START_ZOOM = 11
-OUTPUT_MAP_FILE = 'aesthetic_hubli_dharwad_map.html'
+
+# 4. Output file name
+OUTPUT_MAP_FILE = 'hubli_dharwad_heatmap.html'
 
 # --- Main Script ---
 
-# Load the data
+# Load the data from the CSV file
 try:
     df = pd.read_csv(CSV_FILE_PATH)
+    print(f"Successfully loaded {len(df)} entries from '{CSV_FILE_PATH}'.")
 except FileNotFoundError:
     print(f"ERROR: The file '{CSV_FILE_PATH}' was not found.")
+    print("Please make sure the script is in the same directory as your CSV file, or update the CSV_FILE_PATH variable.")
     exit()
 
-# Clean data by removing entries without coordinates
+# Drop rows with missing latitude or longitude data
 df.dropna(subset=[LATITUDE_COL, LONGITUDE_COL], inplace=True)
-print(f"Loaded and processing {len(df)} locations with valid geocodes.")
+print(f"Processing {len(df)} entries with valid geocodes.")
 
-# Count MSMEs and ITIs for the legend
-msme_count = df[df[TYPE_COL] == 'MSME'].shape[0]
-iti_count = df[df[TYPE_COL] == 'ITI'].shape[0]
+# Create a base map centered on Hubli/Dharwad
+m = folium.Map(location=MAP_CENTER, zoom_start=MAP_START_ZOOM)
 
-print(f"MSMEs: {msme_count}, ITIs: {iti_count}")
-
-# Create a map with aesthetic white background tiles
-m = folium.Map(
-    location=MAP_CENTER,
-    zoom_start=MAP_START_ZOOM,
-    tiles='CartoDB Positron',  # Clean white background
-    attr='Map data © OpenStreetMap contributors'
-)
-
-# Add custom CSS for Roboto font and styling
-title_html = '''
+# --- Add Custom Heading ---
+heading_html = '''
 <div style="position: fixed; 
-            top: 10px; right: 10px; width: 300px; height: 60px; 
-            background-color: rgba(255, 255, 255, 0.9);
-            border: 2px solid #4A90E2;
-            border-radius: 8px;
+            top: 10px; left: 10px; width: 350px; height: 50px; 
+            background-color: rgba(255, 255, 255, 0.9); 
+            border: 2px solid #333;
+            border-radius: 8px; 
             z-index: 9999; 
-            font-family: 'Roboto', Arial, sans-serif;
-            font-size: 20px;
-            font-weight: bold;
-            color: #2C3E50;
-            text-align: center;
-            line-height: 60px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            ">
-    <p style="margin: 0; padding: 0;">Hubli/Dharwad Heatmap</p>
+            font-family: Arial, sans-serif; 
+            font-size: 22px; 
+            font-weight: bold; 
+            color: #333;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+    ITI VS MSMEs Hubli/Dharwad
 </div>
 '''
 
-# Add legend HTML
-legend_html = f'''
-<div style="position: fixed; 
-            bottom: 20px; left: 20px; width: 200px; height: 100px; 
-            background-color: rgba(255, 255, 255, 0.95);
-            border: 2px solid #4A90E2;
-            border-radius: 8px;
-            z-index: 9999; 
-            font-family: 'Roboto', Arial, sans-serif;
-            font-size: 14px;
-            color: #2C3E50;
-            padding: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            ">
-    <p style="margin: 0 0 10px 0; font-weight: bold; font-size: 16px; text-align: center;">Legend</p>
-    <p style="margin: 5px 0; display: flex; align-items: center;">
-        <span style="width: 15px; height: 15px; background-color: #87CEEB; border-radius: 50%; display: inline-block; margin-right: 8px;"></span>
-        MSMEs: {msme_count}
-    </p>
-    <p style="margin: 5px 0; display: flex; align-items: center;">
-        <span style="width: 15px; height: 15px; background-color: #708090; border-radius: 50%; display: inline-block; margin-right: 8px;"></span>
-        ITIs: {iti_count}
-    </p>
-</div>
-'''
+# Add the heading to the map
+m.get_root().html.add_child(folium.Element(heading_html))
 
-# Add Roboto font
-font_html = '''
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-'''
-
-# Add the custom HTML elements to the map
-m.get_root().html.add_child(folium.Element(font_html))
-m.get_root().html.add_child(folium.Element(title_html))
-m.get_root().html.add_child(folium.Element(legend_html))
-
-# Create feature groups for different layers
-heatmap_layer = folium.FeatureGroup(name='Heatmap View', show=True)
-pins_layer = folium.FeatureGroup(name='Location Pins', show=True)
-
-# Add heatmap layer with blue color scheme
-heat_data = df[[LATITUDE_COL, LONGITUDE_COL]].values.tolist()
-HeatMap(
-    heat_data, 
-    radius=15, 
-    blur=10, 
-    gradient={0.0: '#E3F2FD', 0.25: '#BBDEFB', 0.5: '#64B5F6', 0.75: '#2196F3', 1.0: '#0D47A1'}
-).add_to(heatmap_layer)
-
-# Add individual pins with correct colors (light blue for MSMEs, grey for ITIs)
+# --- Add a Pin for Each Location ---
+# We will color-code pins: blue for ITI, red for MSME
 for idx, row in df.iterrows():
-    # Set colors according to requirements
-    if row[TYPE_COL] == 'MSME':
-        pin_color = '#87CEEB'  # Light blue for MSMEs
-        border_color = '#4A90E2'
-    else:  # ITI
-        pin_color = '#708090'  # Grey for ITIs
-        border_color = '#2C3E50'
+    # Define pin color based on the 'Type' column
+    pin_color = 'blue' if row[TYPE_COL] == 'ITI' else 'red'
     
-    popup_text = f"""
-    <div style="font-family: 'Roboto', Arial, sans-serif; max-width: 200px;">
-        <b style="color: #2C3E50; font-size: 16px;">{row[NAME_COL]}</b><br>
-        <span style="color: #4A90E2; font-weight: bold;">Type: {row[TYPE_COL]}</span><br>
-        <span style="color: #666; font-size: 12px;">Click for details</span>
-    </div>
-    """
+    # Create a popup text with the name and type
+    popup_text = f"<b>{row[NAME_COL]}</b><br>Type: {row[TYPE_COL]}"
     
-    folium.CircleMarker(
+    folium.Marker(
         location=[row[LATITUDE_COL], row[LONGITUDE_COL]],
-        radius=6,
-        color=border_color,
-        weight=2,
-        fill=True,
-        fill_color=pin_color,
-        fill_opacity=0.8,
-        popup=folium.Popup(popup_text, max_width=250)
-    ).add_to(pins_layer)
+        popup=popup_text,
+        icon=folium.Icon(color=pin_color, icon='info-sign')
+    ).add_to(m)
 
-# Add the layers to the map
-heatmap_layer.add_to(m)
-pins_layer.add_to(m)
+# --- Add the Heatmap Layer ---
+# Create a list of [lat, lon] points for the heatmap
+heat_data = df[[LATITUDE_COL, LONGITUDE_COL]].values.tolist()
 
-# Add layer control
-folium.LayerControl(position='topright').add_to(m)
+# Add the heatmap to the map
+HeatMap(heat_data).add_to(m)
 
-# Save the map
-m.save(OUTPUT_MAP_FILE)
-print(f"\nSuccess! Your aesthetic map has been saved as '{OUTPUT_MAP_FILE}'.")
-print("Features added:")
-print("- Blue and white color scheme")
-print("- Light blue pins for MSMEs")
-print("- Grey pins for ITIs")
-print("- Custom legend with counts")
-print("- Roboto font heading")
-print("- Enhanced styling and shadows")
+# Add layer control to toggle pins and heatmap on/off
+# folium.LayerControl().add_to(m) # Uncomment if you want layer controls
+
+# --- Save the Map to an HTML File ---
+try:
+    m.save(OUTPUT_MAP_FILE)
+    print(f"\nSuccess! Your map has been saved as '{OUTPUT_MAP_FILE}'.")
+    print("Open this file in a web browser to view your interactive map with heading.")
+except Exception as e:
+    print(f"An error occurred while saving the map: {e}")
