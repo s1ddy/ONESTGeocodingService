@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c8a910f527c007ee3567e2fe3b853c62 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c8a910f527c007ee3567e2fe3b853c62" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c8a910f527c007ee3567e2fe3b853c62 = L.map(
+                "map_c8a910f527c007ee3567e2fe3b853c62",
+                {
+                    center: [15.4, 75.05],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9fa3d5b111d4b60b5ccfe7a160ebaa68 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9fa3d5b111d4b60b5ccfe7a160ebaa68.addTo(map_c8a910f527c007ee3567e2fe3b853c62);
+        
+    
+            var feature_group_38948f65c0a10fefcf6135b0e6f1c338 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var heat_map_89b16508a311a7ddda40c162f7ff4643 = L.heatLayer(
+                [[15.3638384, 75.1275701], [15.3233746, 75.1263033], [15.3638384, 75.1275701], [15.3502515, 75.1457736], [15.3540962, 75.1308189], [15.3549819, 75.0887119], [15.3598653, 75.0466235], [15.3638384, 75.1275701], [15.3549819, 75.0887119], [15.3549819, 75.0887119], [15.5307596, 74.910858], [15.5418405, 74.9032015], [15.3938408, 75.0820943], [15.3550145, 75.0927544], [15.3549819, 75.0887119]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 15,
+  "blur": 10,
+}
+            );
+        
+    
+            heat_map_89b16508a311a7ddda40c162f7ff4643.addTo(feature_group_38948f65c0a10fefcf6135b0e6f1c338);
+        
+    
+            feature_group_38948f65c0a10fefcf6135b0e6f1c338.addTo(map_c8a910f527c007ee3567e2fe3b853c62);
+        
+    
+            var feature_group_f9c03733bed0e1c546fb525f06666f63 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_cluster_103174e5a173872600583c039a833cf1 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_c692beb23a4c75b4eb9d0650936c02ec = L.circleMarker(
+                [15.3638384, 75.1275701],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_103174e5a173872600583c039a833cf1);
+        
+    
+        var popup_0ad0e921df4c54f20e7cc43fc8ca6794 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_293e28e40451defd7a7c34a195eeefd8 = $(`<div id="html_293e28e40451defd7a7c34a195eeefd8" style="width: 100.0%; height: 100.0%;"><b>Govt. Industrial Training Institute</b><br>Type: ITI</div>`)[0];
+                popup_0ad0e921df4c54f20e7cc43fc8ca6794.setContent(html_293e28e40451defd7a7c34a195eeefd8);
+            
+        
+
+        circle_marker_c692beb23a4c75b4eb9d0650936c02ec.bindPopup(popup_0ad0e921df4c54f20e7cc43fc8ca6794)
+        ;
+
+        
+    
+    
+            var circle_marker_652a8422084f4760dfabed41608dc18e = L.circleMarker(
+                [15.3233746, 75.1263033],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_103174e5a173872600583c039a833cf1);
+        
+    
+        var popup_7b84d83da0064d9b90be492c1c7814fa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ff5e35723809e28f8d402160bf644fc = $(`<div id="html_4ff5e35723809e28f8d402160bf644fc" style="width: 100.0%; height: 100.0%;"><b>Dr. Ambedkar Shikshan Sam ITI</b><br>Type: ITI</div>`)[0];
+                popup_7b84d83da0064d9b90be492c1c7814fa.setContent(html_4ff5e35723809e28f8d402160bf644fc);
+            
+        
+
+        circle_marker_652a8422084f4760dfabed41608dc18e.bindPopup(popup_7b84d83da0064d9b90be492c1c7814fa)
+        ;
+
+        
+    
+    
+            var circle_marker_3e102e31560266b8b8618736544086c6 = L.circleMarker(
+                [15.3638384, 75.1275701],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_103174e5a173872600583c039a833cf1);
+        
+    
+        var popup_c41e7a30f7512339702469a8ada4bd21 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a598a372e907ba186d1f7d9d3df6d092 = $(`<div id="html_a598a372e907ba186d1f7d9d3df6d092" style="width: 100.0%; height: 100.0%;"><b>Mahila Vidyapeeta ITI</b><br>Type: ITI</div>`)[0];
+                popup_c41e7a30f7512339702469a8ada4bd21.setContent(html_a598a372e907ba186d1f7d9d3df6d092);
+            
+        
+
+        circle_marker_3e102e31560266b8b8618736544086c6.bindPopup(popup_c41e7a30f7512339702469a8ada4bd21)
+        ;
+
+        
+    
+    
+            var circle_marker_879474d91bec8fd69d9d3f27645e8eb2 = L.circleMarker(
+                [15.3502515, 75.1457736],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_103174e5a173872600583c039a833cf1);
+        
+    
+        var popup_9836fce721aea30773020a2045088c1b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8b66ebf060b477f01282fbaa64ac47c = $(`<div id="html_b8b66ebf060b477f01282fbaa64ac47c" style="width: 100.0%; height: 100.0%;"><b>Smt. Kamalamma Lahoti ITI</b><br>Type: ITI</div>`)[0];
+                popup_9836fce721aea30773020a2045088c1b.setContent(html_b8b66ebf060b477f01282fbaa64ac47c);
+            
+        
+
+        circle_marker_879474d91bec8fd69d9d3f27645e8eb2.bindPopup(popup_9836fce721aea30773020a2045088c1b)
+        ;
+
+        
+    
+    
+            var circle_marker_0c069ea57a0f73efa3cd8c9bed8c548c = L.circleMarker(
+                [15.3540962, 75.1308189],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_103174e5a173872600583c039a833cf1);
+        
+    
+        var popup_a4bbf2e6d004eb76d52544fa2347382b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91bf1c953faa903abd191205b5308f9d = $(`<div id="html_91bf1c953faa903abd191205b5308f9d" style="width: 100.0%; height: 100.0%;"><b>Sri Siddeshwar ITI</b><br>Type: ITI</div>`)[0];
+                popup_a4bbf2e6d004eb76d52544fa2347382b.setContent(html_91bf1c953faa903abd191205b5308f9d);
+            
+        
+
+        circle_marker_0c069ea57a0f73efa3cd8c9bed8c548c.bindPopup(popup_a4bbf2e6d004eb76d52544fa2347382b)
+        ;
+
+        
+    
+    
+            var circle_marker_09321abb2ab7c66464830a64acf6c9cf = L.circleMarker(
+                [15.3549819, 75.0887119],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_103174e5a173872600583c039a833cf1);
+        
+    
+        var popup_fb37dc4467128fea3d885546082f3c6e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_50c79755570cca009c099305d8e4fa59 = $(`<div id="html_50c79755570cca009c099305d8e4fa59" style="width: 100.0%; height: 100.0%;"><b>Govt. ITI for Women</b><br>Type: ITI</div>`)[0];
+                popup_fb37dc4467128fea3d885546082f3c6e.setContent(html_50c79755570cca009c099305d8e4fa59);
+            
+        
+
+        circle_marker_09321abb2ab7c66464830a64acf6c9cf.bindPopup(popup_fb37dc4467128fea3d885546082f3c6e)
+        ;
+
+        
+    
+    
+            var circle_marker_fecdead1d538a9487394a3ba70245155 = L.circleMarker(
+                [15.3598653, 75.0466235],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_103174e5a173872600583c039a833cf1);
+        
+    
+        var popup_c5bc7db9cdf76075cd07778d1f0376f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_635d834aad6835caf537faf34228ae51 = $(`<div id="html_635d834aad6835caf537faf34228ae51" style="width: 100.0%; height: 100.0%;"><b>Basaveshwar ITI</b><br>Type: ITI</div>`)[0];
+                popup_c5bc7db9cdf76075cd07778d1f0376f9.setContent(html_635d834aad6835caf537faf34228ae51);
+            
+        
+
+        circle_marker_fecdead1d538a9487394a3ba70245155.bindPopup(popup_c5bc7db9cdf76075cd07778d1f0376f9)
+        ;
+
+        
+    
+    
+            var circle_marker_eb29f7b05deb6605a326d56b16fdc3e9 = L.circleMarker(
+                [15.3638384, 75.1275701],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_103174e5a173872600583c039a833cf1);
+        
+    
+        var popup_7200fe423f6bb7d5df3a9fd0a1178492 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d84f3e1c0934e25f90b32238908d31ba = $(`<div id="html_d84f3e1c0934e25f90b32238908d31ba" style="width: 100.0%; height: 100.0%;"><b>Karnataka Lingayat Education Society ITI</b><br>Type: ITI</div>`)[0];
+                popup_7200fe423f6bb7d5df3a9fd0a1178492.setContent(html_d84f3e1c0934e25f90b32238908d31ba);
+            
+        
+
+        circle_marker_eb29f7b05deb6605a326d56b16fdc3e9.bindPopup(popup_7200fe423f6bb7d5df3a9fd0a1178492)
+        ;
+
+        
+    
+    
+            var circle_marker_40cdeda73903a6ea20829bfabf7a6bde = L.circleMarker(
+                [15.3549819, 75.0887119],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_103174e5a173872600583c039a833cf1);
+        
+    
+        var popup_aeea5cea83bbc8e2cd7b97c00ead52e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57b0e5d8510ccb0ce69c37c5af7f4e17 = $(`<div id="html_57b0e5d8510ccb0ce69c37c5af7f4e17" style="width: 100.0%; height: 100.0%;"><b>Auto Cluster</b><br>Type: MSME</div>`)[0];
+                popup_aeea5cea83bbc8e2cd7b97c00ead52e4.setContent(html_57b0e5d8510ccb0ce69c37c5af7f4e17);
+            
+        
+
+        circle_marker_40cdeda73903a6ea20829bfabf7a6bde.bindPopup(popup_aeea5cea83bbc8e2cd7b97c00ead52e4)
+        ;
+
+        
+    
+    
+            var circle_marker_a1ad84b5a73218eb99607e3664255b61 = L.circleMarker(
+                [15.3549819, 75.0887119],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_103174e5a173872600583c039a833cf1);
+        
+    
+        var popup_fc1ee168f04e9259289974d6166a0b75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1022957514113b3e3dd27e2e808bc6bb = $(`<div id="html_1022957514113b3e3dd27e2e808bc6bb" style="width: 100.0%; height: 100.0%;"><b>Readymade Garment Cluster</b><br>Type: MSME</div>`)[0];
+                popup_fc1ee168f04e9259289974d6166a0b75.setContent(html_1022957514113b3e3dd27e2e808bc6bb);
+            
+        
+
+        circle_marker_a1ad84b5a73218eb99607e3664255b61.bindPopup(popup_fc1ee168f04e9259289974d6166a0b75)
+        ;
+
+        
+    
+    
+            var circle_marker_8605d5ad5eb8fcab77ff95ed9dae3f94 = L.circleMarker(
+                [15.5307596, 74.910858],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_103174e5a173872600583c039a833cf1);
+        
+    
+        var popup_04cae0829f55e3fbdf74bc18001881ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eea65a5f62283bb8e6eb047dd690c765 = $(`<div id="html_eea65a5f62283bb8e6eb047dd690c765" style="width: 100.0%; height: 100.0%;"><b>Belur Industrial Estate</b><br>Type: MSME</div>`)[0];
+                popup_04cae0829f55e3fbdf74bc18001881ce.setContent(html_eea65a5f62283bb8e6eb047dd690c765);
+            
+        
+
+        circle_marker_8605d5ad5eb8fcab77ff95ed9dae3f94.bindPopup(popup_04cae0829f55e3fbdf74bc18001881ce)
+        ;
+
+        
+    
+    
+            var circle_marker_0eb069bf08b78d02b010f9170edc01c9 = L.circleMarker(
+                [15.5418405, 74.9032015],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_103174e5a173872600583c039a833cf1);
+        
+    
+        var popup_6407e443d9703a9a800a81ee3644d9e9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a61fc9dc22447da79597bbdd8e5cdd0 = $(`<div id="html_9a61fc9dc22447da79597bbdd8e5cdd0" style="width: 100.0%; height: 100.0%;"><b>Kotur Industrial Estate</b><br>Type: MSME</div>`)[0];
+                popup_6407e443d9703a9a800a81ee3644d9e9.setContent(html_9a61fc9dc22447da79597bbdd8e5cdd0);
+            
+        
+
+        circle_marker_0eb069bf08b78d02b010f9170edc01c9.bindPopup(popup_6407e443d9703a9a800a81ee3644d9e9)
+        ;
+
+        
+    
+    
+            var circle_marker_01250af655e64e6f29d1928235f6baa3 = L.circleMarker(
+                [15.3938408, 75.0820943],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_103174e5a173872600583c039a833cf1);
+        
+    
+        var popup_1d0ed70fcfe3a8310433f58f01cf121a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e0addd25efba342823fddd496c9a271a = $(`<div id="html_e0addd25efba342823fddd496c9a271a" style="width: 100.0%; height: 100.0%;"><b>Tungabhadra Industrial Estate</b><br>Type: MSME</div>`)[0];
+                popup_1d0ed70fcfe3a8310433f58f01cf121a.setContent(html_e0addd25efba342823fddd496c9a271a);
+            
+        
+
+        circle_marker_01250af655e64e6f29d1928235f6baa3.bindPopup(popup_1d0ed70fcfe3a8310433f58f01cf121a)
+        ;
+
+        
+    
+    
+            var circle_marker_f50d912819287fe7bdb05f10c2d4bde0 = L.circleMarker(
+                [15.3550145, 75.0927544],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_103174e5a173872600583c039a833cf1);
+        
+    
+        var popup_a9fc74a7083e2e19222f476f6a672eb4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2472c10e925eaf71d72ec341e7cf3ee7 = $(`<div id="html_2472c10e925eaf71d72ec341e7cf3ee7" style="width: 100.0%; height: 100.0%;"><b>Gandhi Nagar Industrial Area</b><br>Type: MSME</div>`)[0];
+                popup_a9fc74a7083e2e19222f476f6a672eb4.setContent(html_2472c10e925eaf71d72ec341e7cf3ee7);
+            
+        
+
+        circle_marker_f50d912819287fe7bdb05f10c2d4bde0.bindPopup(popup_a9fc74a7083e2e19222f476f6a672eb4)
+        ;
+
+        
+    
+    
+            var circle_marker_2337018733c4e149ba5da481739909b5 = L.circleMarker(
+                [15.3549819, 75.0887119],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_103174e5a173872600583c039a833cf1);
+        
+    
+        var popup_e716249a1b9f0adb5faad0c9030e76d9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27445a35c6a2a4dd91f90b8dbf8789a7 = $(`<div id="html_27445a35c6a2a4dd91f90b8dbf8789a7" style="width: 100.0%; height: 100.0%;"><b>Garment Manufacturing Cluster</b><br>Type: MSME</div>`)[0];
+                popup_e716249a1b9f0adb5faad0c9030e76d9.setContent(html_27445a35c6a2a4dd91f90b8dbf8789a7);
+            
+        
+
+        circle_marker_2337018733c4e149ba5da481739909b5.bindPopup(popup_e716249a1b9f0adb5faad0c9030e76d9)
+        ;
+
+        
+    
+    
+            marker_cluster_103174e5a173872600583c039a833cf1.addTo(feature_group_f9c03733bed0e1c546fb525f06666f63);
+        
+    
+            feature_group_f9c03733bed0e1c546fb525f06666f63.addTo(map_c8a910f527c007ee3567e2fe3b853c62);
+        
+    
+            var layer_control_7f16046a76f91d7bd02f76eecd9e3eb2_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_9fa3d5b111d4b60b5ccfe7a160ebaa68,
+                },
+                overlays :  {
+                    "Heatmap View" : feature_group_38948f65c0a10fefcf6135b0e6f1c338,
+                    "Location Pins (Clustered)" : feature_group_f9c03733bed0e1c546fb525f06666f63,
+                },
+            };
+            let layer_control_7f16046a76f91d7bd02f76eecd9e3eb2 = L.control.layers(
+                layer_control_7f16046a76f91d7bd02f76eecd9e3eb2_layers.base_layers,
+                layer_control_7f16046a76f91d7bd02f76eecd9e3eb2_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_c8a910f527c007ee3567e2fe3b853c62);
+
+        
+</script>
+</html>
